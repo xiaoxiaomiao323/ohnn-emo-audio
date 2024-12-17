@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0038)https://jxzhanggg.github.io/Seq2SeqVC/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>LISASSL</title>
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+
+  <head>
+    <title>My Website</title>
+  </head>    
+
+  <h2><strong> Audio samples from <a href="https://arxiv.org/abs/2408.05928"> Adapting General Disentanglement-Based Speaker Anonymization for Enhanced Emotion Preservation </a> </a></strong></h2>  
+  <h3>Paper:</h3>
+  <p> Submitted to Computer Speech & Language  </p>
+  <h3>Authors: </h3>
+  Xiaoxiao Miao, Yuxiang Zhang, Xin Wang, Natalia Tomashenko, Donny Cheng Lock Soh, Ian Mcloughlin
+  <h3>Messages about Data: </h3>
+  <ul>
+   <li>
+   The <a href="https://sail.usc.edu/iemocap/"> Interactive Emotional Dyadic Motion Capture (IEMOCAP) database </a> is an acted, multimodal and multispeaker database, recently collected at SAIL lab at USC. The dataset is available by registering on <a href="https://sail.usc.edu/iemocap/release_form.php"> this page </a>.
+   </li>
+   <li>
+   The <a href="http://kahlan.eps.surrey.ac.uk/savee/"> Surrey Audio-Visual Expressed Emotion (SAVEE) Database </a> is available free of charge for research purposes. <a href="https://cvssp.org/savee/Register.html"> Registration </a> is required to access the database.
+   </li>
+   <li>
+   The <a href="https://ecs.utdallas.edu/research/researchlabs/msp-lab/MSP-Improv.html"> Multimodel Signal Processing (MSP)-Improv corpus</a> is now available under an Academic License.
+   </li>
+   <li>
+   The <a href="https://hltsingapore.github.io/ESD/download.html"> Emotional Speech Database (ESD) </a> is now made available by National University of Singapore (NUS) and Singapore University of Technology and Design (SUTD) and is free to use only for research purpose. The whole database can be downloaded <a herf="https://github.com/HLTSingapore/Emotional-Speech-Data"> here </a>. 
+   </li>
+ </ul>
+
+ <p>&nbsp;</p>
+  <hr>
+  <p>&nbsp;</p>
+
+<h3> Adapting General Disentanglement-Based Speaker Anonymization for Enhanced Emotion Preservation: </h3>
+A general disentanglement-based speaker anonymization system typically separates speech into content, speaker, and prosody features using individual encoders. This paper explores how to adapt such a system when a new speech attribute, for example, emotion, needs to be preserved to a greater extent. While existing systems are good at anonymizing speaker embeddings, they are not designed to preserve emotion. Two strategies for this are examined. First, we show that integrating emotion embeddings from a pre-trained emotion encoder can help preserve emotional cues, even though this approach slightly compromises privacy protection. Alternatively, we propose an emotion compensation strategy as a post-processing step applied to anonymized speaker embeddings. This conceals the original speaker's identity and reintroduces the emotional traits lost during speaker embedding anonymization. Specifically, we model the emotion attribute using support vector machines to learn separate boundaries for each emotion. During inference, the original speaker embedding is processed in two ways: one, by an emotion indicator to predict emotion and select the emotion-matched SVM accurately; and two, by a speaker anonymizer to conceal speaker characteristics. The anonymized speaker embedding is then modified along the corresponding SVM boundary towards an enhanced emotional direction to save the emotional cues. The proposed strategies are also expected to be useful for adapting a general disentanglement-based speaker anonymization system to preserve other target paralinguistic attributes, with potential for a range of downstream tasks.
+
+<table border="1">
+ <tr>
+   <td width="120px">&nbsp;
+
+   </td>
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">Emotion</p>
+
+     </blockquote>
+
+     <td colspan="1">
+       <blockquote>
+
+         <p align="center">Speaker ID</p>
+
+       </blockquote>
+
+       <td colspan="1">
+         <blockquote>
+ 
+           <p align="center">UTT ID</p>
+ 
+         </blockquote>
+ 
+
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">Original SAVEE</p>
+
+     </blockquote>
+   </td>
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">OH SAVEE</p>
+
+     </blockquote>
+   </td>
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">P3 SAVEE</p>
+
+     </blockquote>
+   </td>
+
+ </tr>
+ <tr>
+   <td>
+     <div align="center">JK-sa11</div>
+   </td>
+   <td>
+     <div align="center"> Sad </div>
+   </td>
+
+   <td>
+     <div align="center"> JK </div>
+   </td>
+
+   <td>
+     <div align="center"> 11 </div>
+   </td>
+
+
+   <td><audio src="wavs-csl/SAVEE/sad/JK_sa11.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio></td>
+   <td><audio src="wavs-csl/SAVEE/sad/JK_sa11_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio></td>
+     <td><audio src="wavs-csl/SAVEE/sad/JK_sa11_gen 7.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio></td>
+ </tr>
+ <tr>
+   <td>
+     <div align="center">JE-n14</div>
+   </td>
+
+   <td>
+     <div align="center"> Neutral </div>
+   </td>
+
+   <td>
+     <div align="center">JE </div>
+   </td>
+
+   <td>
+     <div align="center"> 14 </div>
+   </td>
+
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/neutral/JE_n14.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147"><audio src="wavs-csl/SAVEE/neutral/JE_n14_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147"><audio src="wavs-csl/SAVEE/neutral/JE_n14_gen 8.wav" controls="controls">
+     Your browser does not support the audio tag.
+   </audio>
+ </td>
+ </tr>
+ <tr>
+   <td>
+     <div align="center">DC-a10</div>
+   </td>
+   
+   <td>
+     <div align="center"> Angry </div>
+   </td>
+
+   <td>
+     <div align="center"> DC </div>
+   </td>
+
+   <td>
+     <div align="center"> 10 </div>
+   </td>
+
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/angry/DC_a10.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/angry/DC_a10_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/angry/DC_a10_gen_10.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+ </tr>
+ <tr>
+   <td>
+     <div align="center">KL-h11</div>
+   </td>
+
+   <td>
+     <div align="center"> Happy </div>
+   </td>
+
+   <td>
+     <div align="center"> KL </div>
+   </td>
+
+   <td>
+     <div align="center"> 11 </div>
+   </td>
+
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/happy/KL_h11.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/happy/KL_h11_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/SAVEE/happy/KL_h11_gen 7.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+ </tr>
+
+</table>
+
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+
+<table border="1">
+ <tr>
+   <td width="120px">&nbsp;
+
+   </td>
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">Emotion</p>
+
+     </blockquote>
+
+     <td colspan="1">
+       <blockquote>
+
+         <p align="center">Speaker ID</p>
+
+       </blockquote>
+
+       <td colspan="1">
+         <blockquote>
+ 
+           <p align="center">Gender</p>
+ 
+         </blockquote>
+
+       <td colspan="1">
+         <blockquote>
+ 
+           <p align="center">Session ID</p>
+ 
+         </blockquote>
+
+         <td colspan="1">
+           <blockquote>
+   
+             <p align="center">Script ID</p>
+   
+           </blockquote>
+
+           <td colspan="1">
+             <blockquote>
+     
+               <p align="center">UTT ID</p>
+     
+             </blockquote>
+ 
+
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">Original IEMOCAP test</p>
+
+     </blockquote>
+   </td>
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">OH IEMOCAP test</p>
+
+     </blockquote>
+   </td>
+   <td colspan="1">
+     <blockquote>
+
+       <p align="center">P3 IEMOCAP test</p>
+
+     </blockquote>
+   </td>
+
+ </tr>
+ <tr>
+   <td>
+     <div align="center">Ses02F_script02_2_F018</div>
+   </td>
+   <td>
+     <div align="center"> Sad </div>
+   </td>
+
+   <td>
+     <div align="center">Ses02-F </div>
+   </td>
+
+   <td>
+     <div align="center"> Female </div>
+   </td>
+
+   <td>
+     <div align="center"> Session 02 </div>
+   </td>
+
+   <td>
+     <div align="center"> Script 02 </div>
+   </td>
+
+   <td>
+     <div align="center"> F018 </div>
+   </td>
+
+   <td><audio src="wavs-csl/IEMOCAP_test/sad/Ses02F_script02_2_F018.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio></td>
+   <td><audio src="wavs-csl/IEMOCAP_test/sad/Ses02F_script02_2_F018_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio></td>
+     <td><audio src="wavs-csl/IEMOCAP_test/sad/Ses02F_script02_2_F018_gen_10.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio></td>
+ </tr>
+ <tr>
+   <td>
+     <div align="center">Ses01M_script01_2_M001</div>
+   </td>
+
+   <td>
+     <div align="center"> Neutral </div>
+   </td>
+
+   <td>
+     <div align="center">Ses01-M </div>
+   </td>
+
+   <td>
+     <div align="center">Male </div>
+   </td>
+
+   <td>
+     <div align="center"> Session 01 </div>
+   </td>
+
+   <td>
+     <div align="center"> Script 02 </div>
+   </td>
+
+   <td>
+     <div align="center"> M001 </div>
+   </td>
+
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/neutral/Ses01M_script01_2_M001.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147"><audio src="wavs-csl/IEMOCAP_test/neutral/Ses01M_script01_2_M001_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147"><audio src="wavs-csl/IEMOCAP_test/neutral/Ses01M_script01_2_M001_gen_10.wav" controls="controls">
+     Your browser does not support the audio tag.
+   </audio>
+ </td>
+ </tr>
+ <tr>
+   <td>
+     <div align="center">Ses03F_script01_1_M045</div>
+   </td>
+   
+   <td>
+     <div align="center"> Angry </div>
+   </td>
+
+   <td>
+     <div align="center"> Ses03-M </div>
+   </td>
+
+   <td>
+     <div align="center"> Male </div>
+   </td>
+
+   <td>
+     <div align="center"> Session 03 </div>
+   </td>
+
+   <td>
+     <div align="center"> Script 01 </div>
+   </td>
+
+   <td>
+     <div align="center"> M045 </div>
+   </td>
+
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/angry/Ses03F_script01_1_M045.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/angry/Ses03F_script01_1_M045_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/angry/Ses03F_script01_1_M045_gen10.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+ </tr>
+ <tr>
+   <td>
+     <div align="center">Ses04M_script03_1_F014</div>
+   </td>
+
+   <td>
+     <div align="center"> Happy </div>
+   </td>
+
+   <td>
+     <div align="center"> Ses04-F </div>
+   </td>
+
+   <td>
+     <div align="center"> Female </div>
+   </td>
+
+   <td>
+     <div align="center"> Session 04 </div>
+   </td>
+
+   <td>
+     <div align="center"> Script 03 </div>
+   </td>
+
+   <td>
+     <div align="center"> F014 </div>
+   </td>
+
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/happy/Ses04M_script03_1_F014.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/happy/Ses04M_script03_1_F014_gen.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+   <td width="147">
+     <audio src="wavs-csl/IEMOCAP_test/happy/Ses04M_script03_1_F014_gen_10.wav" controls="controls">
+       Your browser does not support the audio tag.
+     </audio>
+   </td>
+ </tr>
+
+</table>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  
+  </div>
+</body>
+</html>
